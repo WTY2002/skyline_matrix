@@ -1,0 +1,1 @@
+/usr/bin/g++  -Wall -Wextra -g CMakeFiles/skyline_matrix.dir/test/main.cpp.o CMakeFiles/skyline_matrix.dir/include/Matrix_encryption.cpp.o CMakeFiles/skyline_matrix.dir/include/Skyline_search.cpp.o -o skyline_matrix  -pthread 

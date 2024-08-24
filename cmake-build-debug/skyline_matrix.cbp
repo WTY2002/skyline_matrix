@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="skyline_matrix"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\eigen3\;CMake Files\..\..\..\..\..\usr\local\share\eigen3\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skyline_matrix">
+				<Option output="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/skyline_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 skyline_matrix"/>
+					<CompileFile command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="skyline_matrix/fast">
+				<Option output="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/skyline_matrix" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/aarch64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/aarch64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/aarch64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 skyline_matrix/fast"/>
+					<CompileFile command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j96 -f &quot;/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include/Matrix_encryption.cpp">
+			<Option target="skyline_matrix"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include/Matrix_encryption.h">
+			<Option target="skyline_matrix"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include/Skyline_search.cpp">
+			<Option target="skyline_matrix"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/include/Skyline_search.h">
+			<Option target="skyline_matrix"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/test/main.cpp">
+			<Option target="skyline_matrix"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/../../../../../usr/local/share/eigen3/cmake/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/../../../../../usr/local/share/eigen3/cmake/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+		<Unit filename="/root/wty/skyline_matrix/tmp/tmp.wrsWXTFIvS/../../../../../usr/local/share/eigen3/cmake/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\eigen3\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
