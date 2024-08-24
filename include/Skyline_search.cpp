@@ -470,25 +470,67 @@ int skyline_search(char *fileString, char *resultFilePath) {
     // 后进行范围查询,ans用于存储skyline查询的结果
     vector<bool> flag(res.size(), true); // 用于标记res中哪些点满足skyline查询
 
-    for (int i = 0; i < res.size(); i++) {
-        bool flag1 = true; // 判断是否每一维的距离都大于等于
-        bool flag2 = false; // 判断是否至少有一维的距离大于
-        for (int j = 0; j < res.size(); j++) {
-            if (i != j) {
-                for (int k = 0; k < res[i].size(); k++) {
-                    if (res[i][k].dot(encrypted_skyline_query[k]) < res[j][k].dot(encrypted_skyline_query[k])) {
-                        flag1 = false;
-                        break;
-                    } else if (res[i][k].dot(encrypted_skyline_query[k]) > res[j][k].dot(encrypted_skyline_query[k])) {
-                        flag2 = true;
+    // for (int i = 0; i < res.size(); i++) {
+    //     bool flag1 = true; // 判断是否每一维的距离都大于等于
+    //     bool flag2 = false; // 判断是否至少有一维的距离大于
+    //     for (int j = 0; j < res.size(); j++) {
+    //         if (i != j) {
+    //             for (int k = 0; k < res[i].size(); k++) {
+    //                 if (res[i][k].dot(encrypted_skyline_query[k]) < res[j][k].dot(encrypted_skyline_query[k])) {
+    //                     flag1 = false;
+    //                     break;
+    //                 } else if (res[i][k].dot(encrypted_skyline_query[k]) > res[j][k].dot(encrypted_skyline_query[k])) {
+    //                     flag2 = true;
+    //                 }
+    //             }
+    //         }
+    //         if (flag1 && flag2) {
+    //             flag[i] = false; // 不满足skyline查询
+    //             break;
+    //         }
+    //     }
+    // }
+
+
+    int num_threads = 10; // 线程数量
+    vector<thread> threads;
+    int chunk_size = res.size() / num_threads;
+
+    for (int t = 0; t < num_threads; t++) {
+        int start = t * chunk_size;
+        int end = (t == num_threads - 1) ? res.size() : start + chunk_size;
+
+        threads.emplace_back([&res, &encrypted_skyline_query, &flag, start, end]() {
+            for (int i = start; i < end; i++) {
+                bool flag1 = true; // 判断是否每一维的距离都大于等于
+                bool flag2 = false; // 判断是否至少有一维的距离大于
+                for (int j = 0; j < res.size(); j++) {
+                    if (i != j) {
+                        for (int k = 0; k < res[i].size(); k++) {
+                            double dot_i = res[i][k].dot(encrypted_skyline_query[k]);
+                            double dot_j = res[j][k].dot(encrypted_skyline_query[k]);
+
+                            if (dot_i < dot_j) {
+                                flag1 = false;
+                                break;
+                            } else if (dot_i > dot_j) {
+                                flag2 = true;
+                            }
+                        }
+                    }
+                    if (flag1 && flag2) {
+                        flag[i] = false;
+                        break;  // 不满足Skyline查询，跳出循环
                     }
                 }
             }
-            if (flag1 && flag2) {
-                flag[i] = false; // 不满足skyline查询
-            }
-        }
+        });
     }
+
+    for (auto& th : threads) {
+        th.join();  // 等待所有线程完成
+    }
+
 
     // 获取结束时间点
     end_time = chrono::high_resolution_clock::now();
