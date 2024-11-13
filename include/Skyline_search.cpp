@@ -7,6 +7,13 @@
 #include "Skyline_search.h"
 #include "Matrix_encryption.h"
 
+
+#ifdef _WIN32
+#define EXPORT_SYMBOL __declspec(dllexport)
+#else
+#define EXPORT_SYMBOL __attribute__((visibility("default")))
+#endif
+
 // 存储kd树所有叶子节点
 vector<KDNode *> nodes;
 
@@ -535,5 +542,27 @@ int skyline_search(char *fileString, char *resultFilePath) {
     //     cerr << "Unable to open file " << resultFilePath << endl;
     //     return 0;
     // }
+    return 1;
+}
+
+
+/**
+ * @Method: clear
+ * @Description: 释放kd树内存
+ */
+void clear() {
+    for (int i = 0; i < kdTrees.size(); i++) {
+        delete kdTrees[i];
+    }
+}
+
+EXPORT_SYMBOL int init_algo(char* fileString) {
+    return dealData(fileString);
+}
+EXPORT_SYMBOL int query_algo(char* fileString, char* resultFilePath) {
+    return skyline_search(fileString, resultFilePath);
+}
+EXPORT_SYMBOL int free_algo() {
+    clear();
     return 1;
 }

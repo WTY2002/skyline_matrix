@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-11/root/usr/bin/c++ -fPIC  -Wall -Wextra -shared -Wl,-soname,libSKYLINE.so -o /root/project4/c/project/skyline_matrix/bin/libSKYLINE.so CMakeFiles/SKYLINE.dir/include/Matrix_encryption.cpp.o CMakeFiles/SKYLINE.dir/include/Skyline_search.cpp.o  -pthread 
